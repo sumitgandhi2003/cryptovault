@@ -1,25 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Navbar from "./component/Navbar/Navbar";
+import Body from "./component/Body/Body";
+import Coindescription from "./component/Coindescription/Coindescription";
+import { createBrowserRouter, Outlet } from "react-router-dom";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="w-full h-full">
+      <Navbar />
+      <Outlet />
     </div>
   );
-}
+};
+
+export const route = createBrowserRouter([
+  {
+    path: "/",
+    element: <App />,
+    children: [
+      {
+        path: "/",
+        element: <Body />,
+      },
+      {
+        path: "/coins/:id",
+        element: <Coindescription />,
+      },
+    ],
+  },
+]);
 
 export default App;
