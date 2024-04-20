@@ -37,14 +37,14 @@ const Coincard = () => {
     <div>
       <div className="flex justify-between gap-4 p-4 m-2">
         <div className="w-1/2 flex justify-start gap-4 items-center mobile:w-full tablet:w-1/2">
-          <div className="text-2xl w-1/2 font-bold mobile:text-lg  small-device:text-xl tablet:text-2xl desktop:text-3xl large-device:text-4xl">
+          <div className="text-2xl w-1/2 font-bold mobile:text-xl  small-device:text-2xl tablet:text-3xl desktop:text-4xl large-device:text-5xl">
             All Coins
           </div>
           <div className=" text-white w-1/2 mobile:text-sm  mobile:text-right tablet:text-left">
             <select
               name=""
               id=""
-              className="bg-black text-white p-2 rounded-md text-xl  mobile:text-sm small-device:text-base tablet:text-lg desktop:text-xl large-device:text-2xl"
+              className="bg-black text-white p-2 rounded-md text-xl  mobile:text-xs small-device:text-base tablet:text-lg desktop:text-xl large-device:text-2xl"
               onChange={(e) => handleChange(e)}
             >
               <option value="high-low">High-to-Low</option>

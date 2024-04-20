@@ -14,14 +14,24 @@ const Contact = () => {
       [name]: value,
     });
   };
-  const submithandle = (e) => {
+  const submithandle = async (e) => {
     e.preventDefault();
     if (contact.email.includes("@") && contact.name && contact.message) {
-      Swal.fire({
+      const isConfirmed = await Swal.fire({
         title: "Thankyou!",
         text: "Your Query has been submited!",
         icon: "success",
       });
+      if (isConfirmed.isConfirmed) {
+        setContact((contact) => {
+          return {
+            ...contact,
+            name: "",
+            email: "",
+            message: "",
+          };
+        });
+      }
       return;
     }
     Swal.fire({
