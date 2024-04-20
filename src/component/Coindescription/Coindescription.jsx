@@ -77,7 +77,11 @@ const Coindescription = () => {
                   Website
                 </div>
                 <div className=" text-left mobile:w-[55%] tablet:w-2/3">
-                  <a href={coinDetail?.links?.homepage[0]} target="_blank">
+                  <a
+                    href={coinDetail?.links?.homepage[0]}
+                    rel="noreferrer"
+                    target="_blank"
+                  >
                     Homepage
                   </a>
                 </div>
