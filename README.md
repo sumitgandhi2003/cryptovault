@@ -1,6 +1,4 @@
-Absolutely! Here's a revised version of the README with a more personalized touch:
 
----
 
 # Crypto Vault
 
