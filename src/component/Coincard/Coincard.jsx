@@ -33,7 +33,7 @@ const Coincard = () => {
       .then((response) => setCoinList(response));
   }, []);
 
-  return (
+  return coinList ? (
     <div>
       <div className="flex justify-between gap-4 p-4 m-2">
         <div className="w-1/2 flex justify-start gap-4 items-center mobile:w-full tablet:w-1/2">
@@ -71,6 +71,10 @@ const Coincard = () => {
             );
           })}
       </div>
+    </div>
+  ) : (
+    <div class="flex justify-center items-center h-screen">
+      <div class="w-16 h-16  border-t-4 border-black rounded-full animate-spin"></div>
     </div>
   );
 };

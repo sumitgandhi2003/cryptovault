@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import Hamburger from "../Hamburger/Hamburger";
 const Navbar = () => {
   const [islogin, setIsLogin] = useState(false);
@@ -10,20 +11,27 @@ const Navbar = () => {
     setIsShow(!isShow);
   };
   return (
-    <div className="navbar w-full flex justify-between items-center p-4 h-24 bg-blue-950 text-white sticky top-0">
+    <div className="navbar w-full flex justify-between items-center p-4 h-24 z-50 bg-blue-950 text-white sticky top-0">
       <div className="logo font-bold text-2xl">Crypto Vault</div>
       <div
         className={`links flex justify-between  items-center gap-4 mr-4  text-lg mobile:block mobile:top-24 mobile:left-0 mobile:absolute mobile:w-full mobile:p-4 mobile:bg-blue-950 mobile:${
           isShow ? "block" : "hidden"
         } tablet:relative tablet:flex tablet:top-0 tablet:w-max tablet:p-0`}
+        onClick={() => setIsShow(false)}
       >
-        <div className="cursor-pointer mobile:border-b-2  tablet:border-0 border-white p-2 hover:bg-blue-700">
-          Home
-        </div>
-        <div className="cursor-pointer mobile:border-b-2 tablet:border-0 border-white p-2 hover:bg-blue-700">
+        <Link to={"/"}>
+          <div className="cursor-pointer mobile:border-b-2  tablet:border-0 border-white p-2  tablet:hover:bg-blue-700">
+            Home
+          </div>
+        </Link>
+        {/* <div className="cursor-pointer mobile:border-b-2 tablet:border-0 border-white p-2  tablet:hover:bg-blue-700">
           About
-        </div>
-        <div className="cursor-pointer  p-2 hover:bg-blue-700">Contact</div>
+        </div> */}
+        <Link to={"/contact"}>
+          <div className="cursor-pointer  p-2  tablet:hover:bg-blue-700">
+            Contact
+          </div>
+        </Link>
         <div
           className="cursor-pointer p-2 bg-blue-800 rounded-md"
           onClick={() => handleLogin()}
