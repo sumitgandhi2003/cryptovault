@@ -1,6 +1,4 @@
 import { useState } from "react";
-// import { Link } from "react-router-dom";
-import { IoMenu } from "react-icons/io5";
 import Hamburger from "../Hamburger/Hamburger";
 const Navbar = () => {
   const [islogin, setIsLogin] = useState(false);
@@ -34,11 +32,6 @@ const Navbar = () => {
         </div>
       </div>
       <Hamburger onclick={handleMenuToggle} isshow={isShow} />
-      {/* <IoMenu
-          fill="white"
-          className="cursor-pointer w-full h-full fill-current"
-          onClick={() => handleMenuToggle()}
-        /> */}
     </div>
   );
 };

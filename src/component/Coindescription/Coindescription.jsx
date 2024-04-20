@@ -25,9 +25,6 @@ const Coindescription = () => {
 
   coinDetail && (document.title = "CryptoVault - " + coinDetail?.name);
   return coinDetail ? (
-    // <div>
-    //   <img src={coinDetail?.image?.large} alt="" />
-    // </div>
     <div className="coin-detail-container w-full p-[30px] ">
       <div className="top-container w-[80%] gap-[5%] flex justify-between items-center mobile:flex-col mobile:w-full tablet:flex-row tablet:w-[80%]">
         <img
