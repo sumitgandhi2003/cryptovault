@@ -3,5 +3,5 @@
   color: blue;
 }
 .loader-container{
-height: cal(100vh-6rem);
+height: calc(100vh-6rem);
 }
