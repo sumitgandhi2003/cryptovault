@@ -2,3 +2,6 @@
   text-decoration: underline;
   color: blue;
 }
+.loader-container{
+height: calc(100vh-6rem);
+}
