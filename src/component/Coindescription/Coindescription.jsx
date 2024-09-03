@@ -101,17 +101,19 @@ const Coindescription = () => {
           </div>
         </div>
       </div>
-      <div className="middle-container font-mono m-auto">
-        <h2 className="text-2xl my-4 font-semibold ">
-          About {coinDetail?.name}
-        </h2>
-        <p
-          className="description mobile:text-sm tablet:text-xl"
-          dangerouslySetInnerHTML={{ __html: coinDetail?.description?.en }}
-        >
-          {}
-        </p>
-      </div>
+      {coinDetail?.description?.en && (
+        <div className="middle-container font-mono m-auto">
+          <h2 className="text-2xl my-4 font-semibold ">
+            About {coinDetail?.name}
+          </h2>
+          <p
+            className="description mobile:text-sm tablet:text-xl"
+            dangerouslySetInnerHTML={{ __html: coinDetail?.description?.en }}
+          >
+            {}
+          </p>
+        </div>
+      )}
       <div className="bottom-container font-mono mt-4 mobile:text-lg laptop:text-xl">
         <h2 className="text-2xl font-semibold my-4 ">
           Data Analysis of {coinDetail?.name}
