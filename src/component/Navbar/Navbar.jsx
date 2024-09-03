@@ -2,11 +2,11 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import Hamburger from "../Hamburger/Hamburger";
 const Navbar = () => {
-  const [islogin, setIsLogin] = useState(false);
+  // const [islogin, setIsLogin] = useState(false);
   const [isShow, setIsShow] = useState(false);
-  const handleLogin = () => {
-    setIsLogin(!islogin);
-  };
+  // const handleLogin = () => {
+  //   setIsLogin(!islogin);
+  // };
   const handleMenuToggle = (e) => {
     setIsShow(!isShow);
   };
@@ -32,12 +32,12 @@ const Navbar = () => {
             Contact
           </div>
         </Link>
-        <div
+        {/* <div
           className="cursor-pointer p-2 bg-blue-800 rounded-md"
           onClick={() => handleLogin()}
         >
           {islogin ? "Logout" : "Login"}
-        </div>
+        </div> */}
       </div>
       <Hamburger onclick={handleMenuToggle} isshow={isShow} />
     </div>
